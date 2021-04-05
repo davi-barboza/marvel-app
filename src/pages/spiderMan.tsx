@@ -2,7 +2,10 @@ import Head from 'next/head'
 import { Container } from '../styles/pages/Comics'
 import { GetServerSideProps } from 'next';
 import CryptoJS from 'crypto-js';
-import ComicCard from '../components/ComicCard'
+import Audio from '../components/Audio';
+import NavBar from '../components/NavBar';
+import CarouselComics from '../components/CarouselComics';
+import SocialMedia from '../components/SocialMedia';
 
 interface IComics {
   id: number;
@@ -18,7 +21,7 @@ interface ComicsData {
   comics: IComics[];
 }
 
-export default function Comics({comics}: ComicsData) {    
+export default function Comics({ comics }: ComicsData) {
 
   return (
     <Container>
@@ -28,15 +31,14 @@ export default function Comics({comics}: ComicsData) {
 
       <main>
         <section>
-
-          {comics.map((comic: any) => (
-            <ComicCard key={comic.id}
-              title={comic.title}
-              thumbnail={comic.thumbnail.path + '.' + comic.thumbnail.extension}
-              description={comic.description}
-            />
-          ))}
+          
+            <CarouselComics comics={comics}/>
+          
         </section>
+
+        <Audio />
+        <NavBar />
+        <SocialMedia />
       </main>
 
     </Container>
@@ -46,7 +48,8 @@ export default function Comics({comics}: ComicsData) {
 export const getServerSideProps: GetServerSideProps = async () => {
   const publicKey = process.env.PUBLIC_KEY;
   const privateKey = process.env.PRIVATE_KEY;
-  const timeStamps = Math.floor(Date.now() / 1000)
+
+  const timeStamps = Date.now()
   const hash = CryptoJS.MD5(timeStamps + privateKey + publicKey).toString();
   const spiderManId = 1009610;
 

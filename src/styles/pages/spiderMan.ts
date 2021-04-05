@@ -17,18 +17,13 @@ export const Container = styled.div`
 
     main {
       position: relative;
-      /* width: 75%;
-      height: 80%;
-      min-height: 530px; */
       padding: 60px 90px;
 
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    
-  .overlay {
+    }   
+    .overlay {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -42,7 +37,6 @@ export const Container = styled.div`
         font-size: 54px;
         color: ${props => props.theme.colors.primary};
     }
-
 
     @media(max-width: 1050px){
       main {

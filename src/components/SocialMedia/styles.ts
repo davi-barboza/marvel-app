@@ -2,17 +2,40 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     height: 100vh;
-    width: 70px; 
+    width: 200px; 
     
     position: fixed;
-    right: 0;
+    top: 0;
+    right: -130px;
 
-    background-color: #C0251D;
+ 
     display: flex;
     align-items: center;
+    z-index: 20;
+    border: solid white;
+    transition: .4s;
+
+    :hover.action{
+      justify-content: flex-start;
+      transition: .4s;
+    }
+
+    div {
+      position: relative;
+      height: 100vh;
+      width: 70px; 
+
+      background-color: #C0251D;
+      display: flex;
+      align-items: center;
+      z-index: 20;
+    }
+    div.action {
+     transform: translateX(-100px)
+    }
 
     span {
-      position: fixed;
+      position: absolute;
       right: 0;
       width: 95px;
       height: 170px;

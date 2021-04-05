@@ -2,7 +2,10 @@ import Head from 'next/head'
 import { Container } from '../styles/pages/Comics'
 import { GetServerSideProps } from 'next';
 import CryptoJS from 'crypto-js';
-import ComicCard from '../components/ComicCard'
+import ComicCard from '../components/CarouselComics/ComicCard'
+import Audio from '../components/Audio';
+import NavBar from '../components/NavBar';
+import SocialMedia from '../components/SocialMedia';
 
 interface IComics {
   id: number;
@@ -26,6 +29,10 @@ const IronMan: React.FC<ComicsData> = ({comics}) => {
         <title>Spider Man | Comics</title>
       </Head>
 
+      <Audio />
+      <NavBar />
+      <SocialMedia />
+
       <main>
         <section>
 
@@ -33,7 +40,6 @@ const IronMan: React.FC<ComicsData> = ({comics}) => {
             <ComicCard key={comic.id}
               title={comic.title}
               thumbnail={comic.thumbnail.path + '.' + comic.thumbnail.extension}
-              description={comic.description}
             />
           ))}
         </section>
@@ -48,7 +54,7 @@ export default IronMan;
 export const getServerSideProps: GetServerSideProps = async () => {
   const publicKey = process.env.PUBLIC_KEY;
   const privateKey = process.env.PRIVATE_KEY;
-  const timeStamps = Math.floor(Date.now() / 1000)
+  const timeStamps = Date.now()
   const hash = CryptoJS.MD5(timeStamps + privateKey + publicKey).toString();
   const ironManId = 1009368;
 

@@ -41,4 +41,8 @@ export const VolumeBar = styled.div`
     width: 12px;
     background: red;
   }
+
+  audio{
+    z-index: 100;
+  }
 `;

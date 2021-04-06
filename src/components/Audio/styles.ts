@@ -5,10 +5,6 @@ export const Container = styled.div`
   left: 30px;
   bottom: 50px;
 
-  width: 3px;
-  height: 100px;
-
-  background: white;
   display: flex;
   justify-content: center;
 
@@ -20,27 +16,16 @@ export const Container = styled.div`
     width: 17px;
     cursor: pointer;
   }
-
- 
 `;
 
-export const VolumeBar = styled.div`
+export const VolumeBar = styled.input`
   position: absolute;
-  bottom: 0;
-  width: 6px;
-  height: 50px;
-  background: red;
-  display: flex;
-  justify-content: center;
+  bottom: 38px;
+  width: 100px;
+  right: -53px;
 
+  transform: rotate(-90deg);
   cursor: pointer;
-
-  span {
-    position: absolute;
-    height: 4px;
-    width: 12px;
-    background: red;
-  }
 
   audio{
     z-index: 100;

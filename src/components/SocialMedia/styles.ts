@@ -12,13 +12,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     z-index: 20;
-    border: solid white;
     transition: .4s;
-
-    :hover.action{
-      justify-content: flex-start;
-      transition: .4s;
-    }
 
     div {
       position: relative;
@@ -28,10 +22,12 @@ export const Container = styled.div`
       background-color: #C0251D;
       display: flex;
       align-items: center;
-      z-index: 20;
+      transform: translateX(100px);
+      transition: .8s;
     }
-    div.action {
-     transform: translateX(-100px)
+    div.active {
+     transform: translateX(0);
+     transition: .8s;
     }
 
     span {

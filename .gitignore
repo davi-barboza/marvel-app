@@ -35,3 +35,5 @@ yarn-error.log*
 
 # private files
 MarvelResponseContext.tsx
+
+.vercel

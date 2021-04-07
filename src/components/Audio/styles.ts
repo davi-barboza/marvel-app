@@ -8,6 +8,20 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
 
+  input{
+    position: absolute;
+    bottom: 38px;
+    width: 100px;
+    right: -53px;
+
+    transform: rotate(-90deg);
+    cursor: pointer;
+  }
+
+  audio{
+    z-index: 100;
+  }
+
   img {
     position: absolute;
     bottom: -25px;
@@ -15,19 +29,5 @@ export const Container = styled.div`
 
     width: 17px;
     cursor: pointer;
-  }
-`;
-
-export const VolumeBar = styled.input`
-  position: absolute;
-  bottom: 38px;
-  width: 100px;
-  right: -53px;
-
-  transform: rotate(-90deg);
-  cursor: pointer;
-
-  audio{
-    z-index: 100;
   }
 `;

@@ -31,16 +31,13 @@ export default function Comics({ comics }: ComicsData) {
 
       <main>
         <section>
-          
-            <CarouselComics comics={comics}/>
-          
+          <CarouselComics comics={comics} />
         </section>
 
         <Audio />
         <NavBar />
         <SocialMedia />
       </main>
-
     </Container>
   )
 }

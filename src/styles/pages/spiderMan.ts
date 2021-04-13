@@ -37,6 +37,10 @@ export const Container = styled.div`
         font-size: 54px;
         color: ${props => props.theme.colors.primary};
     }
+    
+    a{
+      position: fixed;
+    }
 
     @media(max-width: 1050px){
       main {

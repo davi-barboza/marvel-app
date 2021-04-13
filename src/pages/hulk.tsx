@@ -6,6 +6,8 @@ import ComicCard from '../components/CarouselComics/ComicCard'
 import Audio from '../components/Audio';
 import NavBar from '../components/NavBar';
 import SocialMedia from '../components/SocialMedia';
+import Link from 'next/link';
+import CarouselComics from '../components/CarouselComics';
 
 interface IComics {
   id: number;
@@ -28,21 +30,19 @@ const Hulk: React.FC<ComicsData> = ({comics}) => {
       <Head>
         <title>Spider Man | Comics</title>
       </Head>
-
-      <Audio />
-      <NavBar />
-      <SocialMedia />
+      
+      <span className="linkHome">
+        <Link href="/">Home</Link>
+      </span>
 
       <main>
         <section>
-
-          {comics.map((comic: any) => (
-            <ComicCard key={comic.id}
-              title={comic.title}
-              thumbnail={comic.thumbnail.path + '.' + comic.thumbnail.extension}
-            />
-          ))}
+          <CarouselComics comics={comics} />
         </section>
+
+        <Audio />
+        <NavBar />
+        <SocialMedia />
       </main>
 
     </Container>

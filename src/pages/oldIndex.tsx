@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import ComicSearch from '../components/ComicSearch'
 import { useMarvel } from '../context/MarvelResponseContext';
-import { Container } from '../styles/pages/spiderMan'
+import { Container } from '../styles/pages/SpiderMan'
 
 export default function Home() {
   const { setIdChar, idChar, setCharName, charName, charDescription, setCharDescription,

@@ -9,8 +9,8 @@ interface Comics {
 const ComicCard: React.FC<Comics> = (props) => {
 
   return (
-    <Container {...props}>
-        <img src={props.thumbnail} alt={props.title} />
+    <Container {...props} className="keen-slider__slide">
+      <img src={props.thumbnail} alt={props.title} />
     </Container>
   );
 }

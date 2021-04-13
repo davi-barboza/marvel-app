@@ -41,7 +41,7 @@ const Audio: React.FC = () => {
         <img className="notMuted" src={audioIcon} style={{display: `${notMuted}`}} alt="audioIcon" onClick={e => toogleMute('notMuted')}/>
       </button>
 
-      <audio className="tagAudio" src={themeMain} autoPlay loop />
+      <audio className="tagAudio" src={themeMain} loop />
 
       <input className="volume" type="range"  onMouseMove={e => setVolume(e.currentTarget.value)} />
 

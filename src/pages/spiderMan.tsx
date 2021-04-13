@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import { Container } from '../styles/pages/Comics'
+import { Container } from '../styles/pages/Comics';
 import { GetServerSideProps } from 'next';
 import CryptoJS from 'crypto-js';
 import Audio from '../components/Audio';
 import NavBar from '../components/NavBar';
 import CarouselComics from '../components/CarouselComics';
 import SocialMedia from '../components/SocialMedia';
+import Link from 'next/link';
 
 interface IComics {
   id: number;
@@ -28,6 +29,10 @@ export default function Comics({ comics }: ComicsData) {
       <Head>
         <title>Spider Man | Comics</title>
       </Head>
+
+      <span className="linkHome">
+        <Link href="/">Home</Link>
+      </span>
 
       <main>
         <section>

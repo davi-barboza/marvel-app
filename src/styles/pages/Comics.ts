@@ -27,7 +27,22 @@ export const Container = styled.div`
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-    }  
+    }
+    .linkHome{
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      border-bottom: 2px solid;
+      transition: .3s;
+      color: ${props => props.theme.colors.primary};
+    }
+    .linkHome a{
+      color: inherit;
+    }
+    .linkHome:hover{
+      filter: brightness(.8);
+      transition: .3s;  
+    }
 
     @media(max-width: 1050px){
       main {

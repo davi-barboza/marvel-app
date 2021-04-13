@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import bgMain from '../../assets/bg-chars.jpg';
 
 export const Container = styled.div`
 

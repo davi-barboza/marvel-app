@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useMarvel } from '../context/MarvelResponseContext';
 import { Container } from '../styles/pages/Home'
 import Audio from '../components/Audio'
 import NavBar from '../components/NavBar'
